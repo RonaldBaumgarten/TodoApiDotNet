@@ -9,3 +9,31 @@ Content-Type: application/json
 }
 
 ###
+
+POST {{TodoApi_HostAddress}}/api/todoitems
+Content-Type: application/json
+
+{
+  "name": "brush teeth",
+  "isComplete": true
+}
+
+###
+
+GET {{TodoApi_HostAddress}}/api/todoitems
+
+###
+
+@id=1
+GET {{TodoApi_HostAddress}}/api/todoitems/{{id}}
+
+###
+
+PUT {{TodoApi_HostAddress}}/api/todoitems/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "feed the fish",
+  "isComplete": true
+}
